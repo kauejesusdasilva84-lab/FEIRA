@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CETEP Raso da Catarina | Cursos técnicos em Jeremoabo - BA</title>
+  <meta name="description" content="Centro Territorial de Educação Profissional Raso da Catarina, em Jeremoabo (BA). Conheça os cursos técnicos profissionalizantes e saiba como ingressar.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- O HTML só estrutura. O visual vem do style.css e o comportamento do script.js -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <a class="skip" href="#cursos">Ir para os cursos</a>
+
+  <!-- ============ CABEÇALHO ============ -->
+  <header class="header" id="topo">
+    <div class="container header__inner">
+      <a class="brand" href="#inicio" aria-label="CETEP Raso da Catarina, início">
+        <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true">
+          <circle cx="20" cy="20" r="20" fill="#F5B301"/>
+          <path d="M20 34V13M20 25h-7v-8M20 21h7v-6" stroke="#0E3B34" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </svg>
+        <span class="brand__text">
+          <strong>CETEP</strong>
+          <span>Raso da Catarina</span>
+        </span>
+      </a>
+
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">
+        <span class="menu-btn__bar"></span>
+        <span class="visually-hidden">Abrir menu</span>
+      </button>
+
+      <nav class="nav" id="nav" aria-label="Principal">
+        <a href="#sobre">Sobre</a>
+        <a href="#cursos">Cursos</a>
+        <a href="#ingresso">Como ingressar</a>
+        <a href="#duvidas">Dúvidas</a>
+        <a href="#contato" class="btn btn--sun btn--sm">Fale com a gente</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============ BANNER INTERATIVO ============ -->
+    <section class="hero" id="inicio" data-scene="0" aria-roledescription="carrossel" aria-label="Destaques da escola">
+
+      <!-- céu: 4 camadas que trocam com fade -->
+      <div class="sky sky--0 is-on"></div>
+      <div class="sky sky--1"></div>
+      <div class="sky sky--2"></div>
+      <div class="sky sky--3"></div>
+      <div class="sun" aria-hidden="true"></div>
+
+      <!-- paisagem de caatinga -->
+      <svg class="land land--back" viewBox="0 0 1440 260" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 150 C180 90 320 170 520 130 C740 85 900 170 1120 120 C1250 92 1360 120 1440 100 V260 H0Z"/>
+      </svg>
+      <svg class="land land--front" viewBox="0 0 1440 200" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 110 C200 70 380 140 620 110 C860 78 1040 150 1240 105 C1330 85 1400 95 1440 90 V200 H0Z"/>
+      </svg>
+      <svg class="mandacaru mandacaru--a" viewBox="0 0 120 200" aria-hidden="true">
+        <g stroke="currentColor" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" fill="none">
+          <path d="M60 195V30"/><path d="M60 125H30V72"/><path d="M60 98H92V52"/>
+        </g>
+      </svg>
+      <svg class="mandacaru mandacaru--b" viewBox="0 0 120 200" aria-hidden="true">
+        <g stroke="currentColor" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" fill="none">
+          <path d="M60 195V40"/><path d="M60 110H34V68"/>
+        </g>
+      </svg>
+
+      <!-- slides -->
+      <div class="container hero__content">
+        <div class="slides" aria-live="polite">
+          <article class="slide is-active" aria-label="1 de 4">
+            <p class="slide__tag">Educação profissional no sertão</p>
+            <h1>Aqui, o futuro profissional começa perto de casa.</h1>
+            <p>O CETEP Raso da Catarina oferece cursos técnicos para quem quer estudar, trabalhar e crescer sem sair de Jeremoabo.</p>
+            <div class="slide__actions">
+              <a href="#cursos" class="btn btn--sun">Ver os cursos</a>
+              <a href="#ingresso" class="btn btn--ghost">Como ingressar</a>
+            </div>
+          </article>
+
+          <article class="slide" aria-label="2 de 4">
+            <p class="slide__tag">Cursos técnicos</p>
+            <h2>Uma profissão de nível técnico, com o pé na realidade da região.</h2>
+            <p>Administração, informática, agropecuária, saúde e mais. Filtre os cursos e descubra o que combina com você.</p>
+            <div class="slide__actions">
+              <a href="#cursos" class="btn btn--sun">Explorar cursos</a>
+            </div>
+          </article>
+
+          <article class="slide" aria-label="3 de 4">
+            <p class="slide__tag">Do campo à tecnologia</p>
+            <h2>Cuidar da terra, dos negócios e das pessoas também é profissão.</h2>
+            <p>A formação técnica prepara para o mercado de trabalho e abre caminho para o ensino superior.</p>
+            <div class="slide__actions">
+              <a href="#sobre" class="btn btn--sun">Conhecer a escola</a>
+            </div>
+          </article>
+
+          <article class="slide" aria-label="4 de 4">
+            <p class="slide__tag">Matrículas</p>
+            <h2>Ficou com dúvida? A secretaria explica cada etapa.</h2>
+            <p>Mande uma mensagem pelo formulário e receba orientação sobre vagas, documentos e prazos.</p>
+            <div class="slide__actions">
+              <a href="#contato" class="btn btn--sun">Falar com a secretaria</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="hero__controls">
+          <button class="ctrl" id="prev" aria-label="Slide anterior">&#8592;</button>
+          <div class="dots" id="dots" role="tablist" aria-label="Escolher slide"></div>
+          <button class="ctrl" id="next" aria-label="Próximo slide">&#8594;</button>
+          <button class="ctrl ctrl--pause" id="pause" aria-label="Pausar apresentação" aria-pressed="false">Pausar</button>
+        </div>
+      </div>
+      <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+    </section>
+
+    <!-- ============ NÚMEROS ============ -->
+    <section class="facts" aria-label="Resumo">
+      <div class="container facts__grid">
+        <p><strong data-count-courses>0</strong> cursos técnicos</p>
+        <p><strong data-count-axes>0</strong> áreas de formação</p>
+        <p><strong>Rede pública</strong> de educação profissional</p>
+        <p><strong>Jeremoabo</strong> Bahia</p>
+      </div>
+    </section>
+
+    <!-- ============ SOBRE ============ -->
+    <section class="section" id="sobre">
+      <div class="container about">
+        <div class="about__text">
+          <h2>Uma escola feita para o território do Raso da Catarina</h2>
+          <p>O CETEP é um Centro Territorial de Educação Profissional. Isso significa que os cursos são pensados a partir do que a região precisa: gente qualificada para as atividades do sertão baiano e para o mercado de trabalho em geral.</p>
+          <p>Em Jeremoabo, o CETEP Raso da Catarina reúne teoria e prática para que o estudante saia com uma formação técnica reconhecida e novas oportunidades de emprego, renda e estudo.</p>
+          <ul class="ticks">
+            <li>Formação técnica ligada à realidade local</li>
+            <li>Aulas com prática e projetos</li>
+            <li>Caminho aberto para trabalho e ensino superior</li>
+          </ul>
+        </div>
+
+        <!-- Cartões que viram ao clicar -->
+        <div class="flip-grid">
+          <button class="flip" aria-pressed="false">
+            <span class="flip__face flip__front"><b>Missão</b><small>Toque para ver</small></span>
+            <span class="flip__face flip__back">Formar profissionais preparados para o trabalho, com cidadania e compromisso com o território.</span>
+          </button>
+          <button class="flip" aria-pressed="false">
+            <span class="flip__face flip__front"><b>Visão</b><small>Toque para ver</small></span>
+            <span class="flip__face flip__back">Ser referência em educação profissional no semiárido baiano.</span>
+          </button>
+          <button class="flip" aria-pressed="false">
+            <span class="flip__face flip__front"><b>Valores</b><small>Toque para ver</small></span>
+            <span class="flip__face flip__back">Respeito, ética, trabalho em equipe, sustentabilidade e valorização da cultura local.</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CURSOS ============ -->
+    <section class="section section--tint" id="cursos">
+      <div class="container">
+        <div class="section__head">
+          <h2>Cursos técnicos profissionalizantes</h2>
+          <p>Escolha uma área para filtrar e abra um curso para ver o que você aprende e onde pode trabalhar.</p>
+        </div>
+
+        <div class="filters" id="filters" role="group" aria-label="Filtrar por área"></div>
+        <div class="cards" id="cards"></div>
+      </div>
+    </section>
+
+    <!-- ============ COMO INGRESSAR ============ -->
+    <section class="section" id="ingresso">
+      <div class="container">
+        <div class="section__head">
+          <h2>Como ingressar</h2>
+          <p>O processo segue estas etapas. Datas e documentos são divulgados pela secretaria a cada edital.</p>
+        </div>
+        <ol class="steps">
+          <li><h3>Acompanhe o edital</h3><p>Veja período de inscrição, vagas e cursos disponíveis.</p></li>
+          <li><h3>Faça a inscrição</h3><p>Reúna os documentos pedidos e preencha a inscrição no prazo.</p></li>
+          <li><h3>Confirme a matrícula</h3><p>Se for selecionado, compareça à escola para efetivar a vaga.</p></li>
+          <li><h3>Comece o curso</h3><p>Receba a turma, o horário e as orientações do primeiro dia.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ DÚVIDAS ============ -->
+    <section class="section section--tint" id="duvidas">
+      <div class="container faq-wrap">
+        <div class="section__head">
+          <h2>Perguntas frequentes</h2>
+        </div>
+        <div class="faq" id="faq">
+          <div class="faq__item">
+            <button class="faq__q" aria-expanded="false">Quem pode estudar no CETEP?<span class="faq__icon" aria-hidden="true"></span></button>
+            <div class="faq__a"><p>Podem participar estudantes que atendem aos requisitos do edital de cada curso, como a etapa de ensino concluída. Consulte a secretaria para o seu caso.</p></div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__q" aria-expanded="false">Os cursos são pagos?<span class="faq__icon" aria-hidden="true"></span></button>
+            <div class="faq__a"><p>O CETEP faz parte da rede pública de educação profissional. Confirme com a secretaria as condições de cada curso e edital.</p></div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__q" aria-expanded="false">Quando abrem as inscrições?<span class="faq__icon" aria-hidden="true"></span></button>
+            <div class="faq__a"><p>As datas mudam a cada processo seletivo. Acompanhe esta página e fale com a secretaria para receber o aviso.</p></div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__q" aria-expanded="false">O curso técnico vale para o mercado de trabalho?<span class="faq__icon" aria-hidden="true"></span></button>
+            <div class="faq__a"><p>Sim. O diploma técnico comprova a formação profissional e também ajuda na continuidade dos estudos.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTATO ============ -->
+    <section class="section" id="contato">
+      <div class="container contact">
+        <div class="contact__info">
+          <h2>Fale com a secretaria</h2>
+          <p>Tire dúvidas sobre vagas, documentos e prazos.</p>
+          <dl>
+            <dt>Endereço</dt>
+            <dd>[COLOQUE O ENDEREÇO], Jeremoabo - BA</dd>
+            <dt>Telefone / WhatsApp</dt>
+            <dd>[COLOQUE O TELEFONE]</dd>
+            <dt>E-mail</dt>
+            <dd>[COLOQUE O E-MAIL]</dd>
+            <dt>Atendimento</dt>
+            <dd>[COLOQUE OS HORÁRIOS]</dd>
+          </dl>
+        </div>
+
+        <form class="form" id="contactForm" novalidate>
+          <label>Seu nome
+            <input type="text" name="nome" autocomplete="name" required>
+            <span class="form__err" data-err="nome"></span>
+          </label>
+          <label>WhatsApp
+            <input type="tel" name="whats" autocomplete="tel" placeholder="(75) 90000-0000" required>
+            <span class="form__err" data-err="whats"></span>
+          </label>
+          <label>Curso de interesse
+            <select name="curso" id="cursoSelect" required>
+              <option value="">Selecione</option>
+            </select>
+            <span class="form__err" data-err="curso"></span>
+          </label>
+          <label>Mensagem
+            <textarea name="msg" rows="3" placeholder="Escreva sua dúvida (opcional)"></textarea>
+          </label>
+          <button class="btn btn--sun" type="submit">Enviar mensagem</button>
+          <p class="form__ok" id="formOk" role="status" hidden></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ RODAPÉ ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p><strong>CETEP Raso da Catarina</strong><br>Jeremoabo - Bahia</p>
+      <p class="footer__small">&copy; <span id="year"></span> CETEP Raso da Catarina. Todos os direitos reservados.</p>
+      <a href="#topo" class="footer__top">Voltar ao topo</a>
+    </div>
+  </footer>
+
+  <!-- ============ JANELA DE DETALHES DO CURSO ============ -->
+  <dialog class="modal" id="modal" aria-labelledby="modalTitle">
+    <button class="modal__close" id="modalClose" aria-label="Fechar">&times;</button>
+    <p class="modal__axis" id="modalAxis"></p>
+    <h3 id="modalTitle"></h3>
+    <p id="modalDesc"></p>
+    <div class="modal__cols">
+      <div><h4>O que você aprende</h4><ul id="modalLearn"></ul></div>
+      <div><h4>Onde pode atuar</h4><ul id="modalWork"></ul></div>
+    </div>
+    <button class="btn btn--sun" id="modalCta">Quero este curso</button>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
