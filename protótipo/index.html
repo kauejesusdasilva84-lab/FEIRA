@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CETEP Raso da Catarina | Cursos técnicos em Jeremoabo - BA</title>
+  <meta name="description" content="Projeto demonstrativo: portal do Centro Territorial de Educação Profissional Raso da Catarina, em Jeremoabo (BA), com os cursos técnicos profissionalizantes.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Ícones (Font Awesome), os mesmos usados pelo Design System do governo -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========== ATALHOS DE ACESSIBILIDADE (padrão dos portais do governo) ========== -->
+  <nav class="skip-links" aria-label="Atalhos">
+    <a href="#conteudo" accesskey="1">Ir para o conteúdo <kbd>1</kbd></a>
+    <a href="#menuBtn" accesskey="2">Ir para o menu <kbd>2</kbd></a>
+    <a href="#q" accesskey="3">Ir para a busca <kbd>3</kbd></a>
+    <a href="#rodape" accesskey="4">Ir para o rodapé <kbd>4</kbd></a>
+  </nav>
+
+  <!-- ========== BARRA DE IDENTIDADE + ACESSIBILIDADE ========== -->
+  <div class="brandbar">
+    <div class="container brandbar__in">
+      <p class="brandbar__demo">
+        <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+        Site demonstrativo · Projeto de feira de ciências · Não é o site oficial
+      </p>
+      <div class="a11y" role="group" aria-label="Recursos de acessibilidade">
+        <button type="button" id="fontDown" aria-label="Diminuir tamanho da fonte">A-</button>
+        <button type="button" id="fontUp" aria-label="Aumentar tamanho da fonte">A+</button>
+        <button type="button" id="contrastBtn" aria-pressed="false">
+          <i class="fa-solid fa-circle-half-stroke" aria-hidden="true"></i> Alto contraste
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== CABEÇALHO ========== -->
+  <header class="header" id="topo">
+    <div class="container header__in">
+      <button type="button" class="menu-btn" id="menuBtn" aria-controls="drawer" aria-expanded="false">
+        <i class="fa-solid fa-bars" aria-hidden="true"></i><span>Menu</span>
+      </button>
+
+      <a class="brand" href="#inicio" aria-label="CETEP Raso da Catarina, página inicial">
+        <span class="brand__mark" aria-hidden="true"><i class="fa-solid fa-graduation-cap"></i></span>
+        <span class="brand__text">
+          <small>Centro Territorial de Educação Profissional</small>
+          <strong>CETEP Raso da Catarina</strong>
+        </span>
+      </a>
+
+      <form class="search" id="searchForm" role="search" autocomplete="off">
+        <label class="sr-only" for="q">Pesquisar no site</label>
+        <input id="q" type="search" placeholder="O que você procura?" aria-controls="results" aria-expanded="false">
+        <button type="submit" aria-label="Pesquisar"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></button>
+        <ul class="search__results" id="results" role="listbox" hidden></ul>
+      </form>
+    </div>
+  </header>
+
+  <!-- ========== MENU LATERAL ========== -->
+  <div class="scrim" id="scrim" hidden></div>
+  <aside class="drawer" id="drawer" aria-label="Menu principal" inert>
+    <div class="drawer__head">
+      <strong>Menu</strong>
+      <button type="button" id="drawerClose" aria-label="Fechar menu"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+    </div>
+    <nav>
+      <ul class="drawer__list">
+        <li><a href="#inicio"><i class="fa-solid fa-house" aria-hidden="true"></i> Página inicial</a></li>
+        <li><a href="#sobre"><i class="fa-solid fa-school" aria-hidden="true"></i> Institucional</a></li>
+        <li class="has-sub">
+          <button type="button" class="sub-toggle" aria-expanded="false" aria-controls="courseSub">
+            <span><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> Cursos técnicos</span>
+            <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+          </button>
+          <ul class="drawer__sub" id="courseSub" hidden></ul>
+        </li>
+        <li><a href="#noticias"><i class="fa-solid fa-newspaper" aria-hidden="true"></i> Notícias e avisos</a></li>
+        <li><a href="#ingresso"><i class="fa-solid fa-file-signature" aria-hidden="true"></i> Como ingressar</a></li>
+        <li><a href="#duvidas"><i class="fa-solid fa-circle-question" aria-hidden="true"></i> Perguntas frequentes</a></li>
+        <li><a href="#contato"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Contato</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- ========== CONTEÚDO ========== -->
+  <main id="conteudo">
+
+    <!-- caminho de navegação (breadcrumb) -->
+    <nav class="breadcrumb" aria-label="Você está aqui">
+      <div class="container">
+        <ol>
+          <li><a href="#inicio"><i class="fa-solid fa-house" aria-hidden="true"></i><span class="sr-only">Página inicial</span></a></li>
+          <li><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></li>
+          <li aria-current="location" id="crumbCurrent">Página inicial</li>
+        </ol>
+      </div>
+    </nav>
+
+    <!-- ========== BANNER INTERATIVO ========== -->
+    <section class="hero" id="inicio" data-crumb="Página inicial" aria-roledescription="carrossel" aria-label="Destaques">
+      <div class="container hero__in">
+        <div class="slides" aria-live="polite">
+
+          <article class="slide is-active" aria-label="1 de 4">
+            <div class="slide__text">
+              <p class="tag">Educação profissional</p>
+              <h1>Formação técnica perto de você, em Jeremoabo</h1>
+              <p>Conheça os cursos técnicos profissionalizantes do CETEP Raso da Catarina e dê o próximo passo na sua carreira.</p>
+              <div class="slide__actions">
+                <a href="#cursos" class="btn btn--light">Ver cursos</a>
+                <a href="#ingresso" class="btn btn--outline-light">Como ingressar</a>
+              </div>
+            </div>
+            <div class="slide__art" aria-hidden="true"><i class="fa-solid fa-graduation-cap"></i></div>
+          </article>
+
+          <article class="slide" aria-label="2 de 4">
+            <div class="slide__text">
+              <p class="tag">Tecnologia</p>
+              <h2>Entre no mundo da informática</h2>
+              <p>Aprenda computação, redes e programação com aulas práticas e orientação de professores.</p>
+              <div class="slide__actions">
+                <a href="#cursos" class="btn btn--light">Explorar cursos</a>
+              </div>
+            </div>
+            <div class="slide__art" aria-hidden="true"><i class="fa-solid fa-laptop-code"></i></div>
+          </article>
+
+          <article class="slide" aria-label="3 de 4">
+            <div class="slide__text">
+              <p class="tag">Campo e sustentabilidade</p>
+              <h2>Do semiárido para o mercado de trabalho</h2>
+              <p>Formações ligadas à realidade do território, da produção rural à gestão e à saúde.</p>
+              <div class="slide__actions">
+                <a href="#sobre" class="btn btn--light">Conhecer a escola</a>
+              </div>
+            </div>
+            <div class="slide__art" aria-hidden="true"><i class="fa-solid fa-seedling"></i></div>
+          </article>
+
+          <article class="slide" aria-label="4 de 4">
+            <div class="slide__text">
+              <p class="tag">Matrículas</p>
+              <h2>Dúvidas sobre vagas e documentos?</h2>
+              <p>Fale com a secretaria e receba orientação sobre cada etapa do ingresso.</p>
+              <div class="slide__actions">
+                <a href="#contato" class="btn btn--light">Falar com a secretaria</a>
+              </div>
+            </div>
+            <div class="slide__art" aria-hidden="true"><i class="fa-solid fa-file-signature"></i></div>
+          </article>
+        </div>
+
+        <div class="hero__controls">
+          <button type="button" class="ctrl" id="prev" aria-label="Slide anterior"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>
+          <div class="dots" id="dots" role="tablist" aria-label="Escolher slide"></div>
+          <button type="button" class="ctrl" id="next" aria-label="Próximo slide"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
+          <button type="button" class="ctrl ctrl--text" id="pause" aria-pressed="false" aria-label="Pausar apresentação">
+            <i class="fa-solid fa-pause" aria-hidden="true"></i> <span>Pausar</span>
+          </button>
+        </div>
+      </div>
+      <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+    </section>
+
+    <!-- ========== ACESSO RÁPIDO ========== -->
+    <section class="section" id="acesso" data-crumb="Acesso rápido" aria-labelledby="t-acesso">
+      <div class="container">
+        <h2 class="section__title" id="t-acesso">Acesso rápido</h2>
+        <ul class="quick">
+          <li><a href="#cursos"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i><span>Cursos técnicos</span></a></li>
+          <li><a href="#ingresso"><i class="fa-solid fa-file-signature" aria-hidden="true"></i><span>Como ingressar</span></a></li>
+          <li><a href="#noticias"><i class="fa-solid fa-newspaper" aria-hidden="true"></i><span>Notícias e avisos</span></a></li>
+          <li><a href="#sobre"><i class="fa-solid fa-school" aria-hidden="true"></i><span>Sobre a escola</span></a></li>
+          <li><a href="#duvidas"><i class="fa-solid fa-circle-question" aria-hidden="true"></i><span>Dúvidas</span></a></li>
+          <li><a href="#contato"><i class="fa-solid fa-envelope" aria-hidden="true"></i><span>Fale conosco</span></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ========== INSTITUCIONAL ========== -->
+    <section class="section section--gray" id="sobre" data-crumb="Institucional" aria-labelledby="t-sobre">
+      <div class="container about">
+        <div>
+          <h2 class="section__title" id="t-sobre">Institucional</h2>
+          <p>O CETEP é um Centro Territorial de Educação Profissional. Os cursos são pensados a partir das necessidades da região, para formar pessoas qualificadas para o trabalho no sertão baiano e além.</p>
+          <p>Em Jeremoabo, o CETEP Raso da Catarina reúne teoria e prática para que o estudante conclua o curso com uma formação técnica e novas oportunidades de emprego, renda e estudo.</p>
+        </div>
+
+        <!-- abas (componente "tab" do design system) -->
+        <div class="tabs" id="aboutTabs">
+          <div class="tabs__list" role="tablist" aria-label="Missão, visão e valores">
+            <button type="button" role="tab" id="tab-missao" aria-selected="true" aria-controls="pn-missao">Missão</button>
+            <button type="button" role="tab" id="tab-visao" aria-selected="false" aria-controls="pn-visao" tabindex="-1">Visão</button>
+            <button type="button" role="tab" id="tab-valores" aria-selected="false" aria-controls="pn-valores" tabindex="-1">Valores</button>
+          </div>
+          <div class="tabs__panel" role="tabpanel" id="pn-missao" aria-labelledby="tab-missao">
+            <p>Formar profissionais preparados para o mundo do trabalho, com cidadania e compromisso com o desenvolvimento do território.</p>
+          </div>
+          <div class="tabs__panel" role="tabpanel" id="pn-visao" aria-labelledby="tab-visao" hidden>
+            <p>Ser referência em educação profissional no semiárido baiano.</p>
+          </div>
+          <div class="tabs__panel" role="tabpanel" id="pn-valores" aria-labelledby="tab-valores" hidden>
+            <p>Ética, respeito, trabalho em equipe, sustentabilidade e valorização da cultura local.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CURSOS ========== -->
+    <section class="section" id="cursos" data-crumb="Cursos técnicos" aria-labelledby="t-cursos">
+      <div class="container">
+        <h2 class="section__title" id="t-cursos">Cursos técnicos profissionalizantes</h2>
+        <p class="section__lead">Filtre por área de formação e abra um curso para ver o que você aprende e onde pode atuar.</p>
+
+        <div class="filters" id="filters" role="group" aria-label="Filtrar cursos por eixo"></div>
+        <p class="count" id="courseCount" aria-live="polite"></p>
+        <div class="cards" id="cards"></div>
+      </div>
+    </section>
+
+    <!-- ========== NOTÍCIAS ========== -->
+    <section class="section section--gray" id="noticias" data-crumb="Notícias e avisos" aria-labelledby="t-noticias">
+      <div class="container">
+        <h2 class="section__title" id="t-noticias">Notícias e avisos</h2>
+        <p class="section__lead">Conteúdos de exemplo para demonstrar a seção. Substitua pelas notícias reais da escola.</p>
+        <div class="news">
+          <article class="news__item">
+            <span class="badge badge--info">Matrículas</span>
+            <h3>Acompanhe o edital de ingresso</h3>
+            <p>Veja período de inscrição, vagas e documentos necessários para cada curso técnico.</p>
+            <a href="#ingresso" class="link">Ver como ingressar <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+          </article>
+          <article class="news__item">
+            <span class="badge badge--success">Cursos</span>
+            <h3>Conheça os eixos de formação</h3>
+            <p>Gestão, tecnologia, recursos naturais e saúde: encontre a área que combina com você.</p>
+            <a href="#cursos" class="link">Explorar cursos <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+          </article>
+          <article class="news__item">
+            <span class="badge badge--warning">Atendimento</span>
+            <h3>Secretaria à disposição</h3>
+            <p>Envie sua dúvida pelo formulário e receba orientação sobre vagas, prazos e documentos.</p>
+            <a href="#contato" class="link">Falar com a secretaria <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== COMO INGRESSAR ========== -->
+    <section class="section" id="ingresso" data-crumb="Como ingressar" aria-labelledby="t-ingresso">
+      <div class="container">
+        <h2 class="section__title" id="t-ingresso">Como ingressar</h2>
+        <p class="section__lead">Clique em cada etapa para ver os detalhes. Datas e documentos variam a cada edital.</p>
+
+        <div class="stepper" id="stepper">
+          <ol class="stepper__list">
+            <li><button type="button" class="step is-active" aria-current="step"><span class="step__n">1</span><span class="step__l">Edital</span></button></li>
+            <li><button type="button" class="step"><span class="step__n">2</span><span class="step__l">Inscrição</span></button></li>
+            <li><button type="button" class="step"><span class="step__n">3</span><span class="step__l">Matrícula</span></button></li>
+            <li><button type="button" class="step"><span class="step__n">4</span><span class="step__l">Início das aulas</span></button></li>
+          </ol>
+          <div class="stepper__panel" aria-live="polite">
+            <h3 id="stepTitle"></h3>
+            <p id="stepText"></p>
+            <div class="stepper__nav">
+              <button type="button" class="btn btn--secondary" id="stepPrev">Anterior</button>
+              <button type="button" class="btn btn--primary" id="stepNext">Próxima etapa</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PERGUNTAS FREQUENTES ========== -->
+    <section class="section section--gray" id="duvidas" data-crumb="Perguntas frequentes" aria-labelledby="t-duvidas">
+      <div class="container narrow">
+        <h2 class="section__title" id="t-duvidas">Perguntas frequentes</h2>
+        <div class="accordion" id="faq">
+          <div class="accordion__item">
+            <h3><button type="button" class="accordion__btn" aria-expanded="false">Quem pode estudar no CETEP? <i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button></h3>
+            <div class="accordion__panel"><p>Podem participar estudantes que atendem aos requisitos do edital de cada curso. Consulte a secretaria para saber sobre o seu caso.</p></div>
+          </div>
+          <div class="accordion__item">
+            <h3><button type="button" class="accordion__btn" aria-expanded="false">Os cursos são gratuitos? <i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button></h3>
+            <div class="accordion__panel"><p>Os CETEPs fazem parte da rede pública de educação profissional. Confirme com a secretaria as condições de cada curso.</p></div>
+          </div>
+          <div class="accordion__item">
+            <h3><button type="button" class="accordion__btn" aria-expanded="false">Quando abrem as inscrições? <i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button></h3>
+            <div class="accordion__panel"><p>As datas mudam a cada processo seletivo. Acompanhe esta página e fale com a secretaria para receber o aviso.</p></div>
+          </div>
+          <div class="accordion__item">
+            <h3><button type="button" class="accordion__btn" aria-expanded="false">O diploma técnico vale no mercado de trabalho? <i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button></h3>
+            <div class="accordion__panel"><p>Sim. O diploma técnico comprova a formação profissional e também ajuda na continuidade dos estudos.</p></div>
+          </div>
+        </div>
+
+        <!-- avaliação da página (muito comum em portais do governo) -->
+        <div class="feedback" id="feedback">
+          <p><strong>Esta página foi útil?</strong></p>
+          <div class="feedback__btns">
+            <button type="button" class="btn btn--secondary btn--sm" data-fb="sim"><i class="fa-regular fa-thumbs-up" aria-hidden="true"></i> Sim</button>
+            <button type="button" class="btn btn--secondary btn--sm" data-fb="nao"><i class="fa-regular fa-thumbs-down" aria-hidden="true"></i> Não</button>
+          </div>
+          <p class="feedback__msg" id="fbMsg" role="status" hidden></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONTATO ========== -->
+    <section class="section" id="contato" data-crumb="Contato" aria-labelledby="t-contato">
+      <div class="container contact">
+        <div>
+          <h2 class="section__title" id="t-contato">Fale conosco</h2>
+          <p>Tire dúvidas sobre vagas, documentos e prazos.</p>
+          <dl class="info">
+            <dt><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Endereço</dt>
+            <dd>[COLOQUE O ENDEREÇO], Jeremoabo - BA</dd>
+            <dt><i class="fa-solid fa-phone" aria-hidden="true"></i> Telefone / WhatsApp</dt>
+            <dd>[COLOQUE O TELEFONE]</dd>
+            <dt><i class="fa-solid fa-envelope" aria-hidden="true"></i> E-mail</dt>
+            <dd>[COLOQUE O E-MAIL]</dd>
+            <dt><i class="fa-solid fa-clock" aria-hidden="true"></i> Atendimento</dt>
+            <dd>[COLOQUE OS HORÁRIOS]</dd>
+          </dl>
+        </div>
+
+        <form class="form" id="contactForm" novalidate>
+          <div class="field">
+            <label for="f-nome">Nome completo</label>
+            <input type="text" id="f-nome" name="nome" autocomplete="name" aria-describedby="e-nome">
+            <span class="field__err" id="e-nome" data-err="nome"></span>
+          </div>
+          <div class="field">
+            <label for="f-whats">WhatsApp</label>
+            <input type="tel" id="f-whats" name="whats" autocomplete="tel" placeholder="(75) 90000-0000" aria-describedby="e-whats">
+            <span class="field__err" id="e-whats" data-err="whats"></span>
+          </div>
+          <div class="field">
+            <label for="cursoSelect">Curso de interesse</label>
+            <select id="cursoSelect" name="curso" aria-describedby="e-curso"><option value="">Selecione</option></select>
+            <span class="field__err" id="e-curso" data-err="curso"></span>
+          </div>
+          <div class="field">
+            <label for="f-msg">Mensagem <small>(opcional)</small></label>
+            <textarea id="f-msg" name="msg" rows="3"></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary">Enviar mensagem</button>
+          <p class="callout callout--success" id="formOk" role="status" hidden></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== RODAPÉ ========== -->
+  <footer class="footer" id="rodape">
+    <div class="container footer__grid">
+      <div>
+        <p class="footer__brand"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> CETEP Raso da Catarina</p>
+        <p>Centro Territorial de Educação Profissional<br>Jeremoabo - Bahia</p>
+      </div>
+      <nav aria-label="Institucional">
+        <h2>Institucional</h2>
+        <ul>
+          <li><a href="#sobre">Sobre a escola</a></li>
+          <li><a href="#noticias">Notícias e avisos</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Serviços">
+        <h2>Serviços</h2>
+        <ul>
+          <li><a href="#cursos">Cursos técnicos</a></li>
+          <li><a href="#ingresso">Como ingressar</a></li>
+          <li><a href="#duvidas">Perguntas frequentes</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Atendimento">
+        <h2>Atendimento</h2>
+        <ul>
+          <li><a href="#contato">Fale conosco</a></li>
+          <li><a href="#topo">Voltar ao topo</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <p><strong>Site demonstrativo</strong> desenvolvido como projeto de feira de ciências. Não representa o site oficial da instituição nem de qualquer órgão de governo.</p>
+        <p>&copy; <span id="year"></span> Projeto escolar. Conteúdos de exemplo.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button type="button" class="to-top" id="toTop" aria-label="Voltar ao topo" hidden><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></button>
+
+  <!-- ========== JANELA DE DETALHES DO CURSO ========== -->
+  <dialog class="modal" id="modal" aria-labelledby="modalTitle">
+    <button type="button" class="modal__close" id="modalClose" aria-label="Fechar"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+    <p class="modal__axis" id="modalAxis"></p>
+    <h2 id="modalTitle"></h2>
+    <p id="modalDesc"></p>
+    <div class="modal__cols">
+      <div><h3>O que você aprende</h3><ul id="modalLearn"></ul></div>
+      <div><h3>Onde pode atuar</h3><ul id="modalWork"></ul></div>
+    </div>
+    <button type="button" class="btn btn--primary" id="modalCta">Tenho interesse neste curso</button>
+  </dialog>
+
+  <!-- aviso de cookies / armazenamento local -->
+  <div class="cookiebar" id="cookiebar" role="region" aria-label="Aviso de armazenamento local" hidden>
+    <p>Este site demonstrativo usa apenas o armazenamento do seu navegador para lembrar suas preferências de acessibilidade. Nenhum dado é enviado a servidores.</p>
+    <button type="button" class="btn btn--light btn--sm" id="cookieOk">Entendi</button>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
