@@ -16,11 +16,11 @@ const SITE = {
 
   contato: {
     endereco: "Rua/Avenida, nº – Centro, Jeremoabo – BA",
-    telefone: "(75) 0000-0000",
-    whatsapp: "(75) 90000-0000",
-    email: "contato@exemplo.com.br",
+    telefone: "(75) 9173-6032",
+    whatsapp: "(75) 99173-6032",
+    email: "ceteprasodacatarina@gmail.com",
     redes: [
-      { nome: "Instagram", url: "#" },
+      { nome: "Instagram", url: "https://www.instagram.com/ceteprasodacatarina?rpxt=Y3h6Mjd5d2xyaDFx" },
       { nome: "Facebook", url: "#" },
       { nome: "YouTube", url: "#" }
     ]
@@ -36,7 +36,7 @@ const SITE = {
 
   /* Atalhos da seção "Acesso rápido" */
   acesso: [
-    { titulo: "Matrícula", texto: "Veja como e quando se matricular.", url: "#contato" },
+    { titulo: "Matrícula", texto: "Veja como e quando se matricular.", url: "https://www.instagram.com/ceteprasodacatarina?rpxt=Y3h6Mjd5d2xyaDFx" },
     { titulo: "Sistema acadêmico (SIGEDUC)", texto: "Notas, frequência e documentos.", url: "https://sigeduc.educacao.ba.gov.br/sigeduc/verTelaLogin.do" },
     { titulo: "Secretaria da Educação", texto: "Portal da Educação da Bahia.", url: "https://www.educacao.ba.gov.br/" },
     { titulo: "Fale conosco", texto: "Telefone, e-mail e endereço.", url: "#contato" }
@@ -60,14 +60,14 @@ const SITE = {
 
   /* Notícias: data no formato AAAA-MM-DD */
   noticias: [
-    { data: "2026-10-10", titulo: "Inscrições abertas para a Feira de Ciências", texto: "Estudantes já podem inscrever seus projetos na feira da escola." },
-    { data: "2026-09-18", titulo: "Reunião de pais e responsáveis", texto: "Encontro para apresentar o calendário do próximo bimestre." },
-    { data: "2026-08-28", titulo: "Aulas de laboratório de informática", texto: "Novo horário de uso do laboratório para as turmas técnicas." }
+    { data: "2026-10-16", titulo: "SEC e MEC reúnem dois mil estudantes em aulão do ENEM, no Extremo Sul da Bahia", texto: "Cerca de dois mil estudantes concluintes da 3ª série do Ensino Médio de 21 unidades escolares da rede estadual localizadas nos núcleos territoriais de Educação do Extremo Sul (NTE 07) e da Costa do Descobrimento (NTE 27) participaram, nesta sexta-feira (16), no Parque de Exposições de Teixeira de Freitas, de um aulão do Exame Nacional do Ensino Médio (ENEM) 2026. A iniciativa, promovida pela Secretaria da Educação do Estado (SEC), em parceria com o Ministério da Educação (MEC), visa fortalecer a preparação dos jovens para o exame, por meio da revisão de conteúdos e de atividades voltadas ao bem-estar emocional." },
+    { data: "2026-09-15", titulo: "Bahia é o Estado com maior proporção de professores e coordenadores pedagógicos concursados e avança na valorização da carreira do magistério público estadual", texto: "A Rede Estadual de Ensino da Bahia se destaca por ter a maior proporção de educadores concursados do país, segundo o último Censo (2025). Isso significa mais de 94,1% de professores e coordenadores pedagógicos efetivos que contam com uma carreira valorizada, seja por formação continuada, promoção, progressão, gratificações ou aperfeiçoamento profissional." },
+    { data: "2026-10-16", titulo: "Educadores e estudantes abordam rumos da Educação Superior no Brasil em debate na UFBA", texto: "A Universidade Federal da Bahia (UFBA) promoveu, nesta quinta-feira (15), um encontro com educadores e estudantes para debater “O futuro da Educação Superior no Brasil”, no Salão Nobre da Reitoria, em Salvador. A iniciativa, mediada pelo reitor João Carlos Salles, contou com a palestra do secretário de Educação Superior do Ministério da Educação (MEC), Marcus Vinicius David. O secretário da Educação do Estado da Bahia, Marcius Gomes, também participou da atividade.o de uso do laboratório para as turmas técnicas." }
   ]
 };
 
 /* ==========================================================
-   2. CÓDIGO - não precisa mexer daqui para baixo
+   2. CÓDIGO - TÁ FUNCIONANDO NORMAL, NÃO MEXE DAQUI PRA BAIXO!!!!!!!!
    ========================================================== */
 const $ = (s) => document.querySelector(s);
 const esc = (t) => String(t ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
